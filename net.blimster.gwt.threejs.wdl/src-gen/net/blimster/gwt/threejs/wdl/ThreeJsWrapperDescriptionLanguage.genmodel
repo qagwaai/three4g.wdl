@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.blimster.gwt.threejs.wdl/src-gen"
+    editDirectory="/net.blimster.gwt.threejs.wdl.edit/src" editorDirectory="/net.blimster.gwt.threejs.wdl.editor/src"
+    modelPluginID="net.blimster.gwt.threejs.wdl" forceOverwrite="true" modelName="ThreeJsWrapperDescriptionLanguage"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="net.blimster.gwt.threejs.wdl.edit"
+    editorPluginID="net.blimster.gwt.threejs.wdl.editor">
+  <genPackages prefix="ThreeJsWrapperDescriptionLanguage" basePackage="net.blimster.gwt.threejs.wdl"
+      disposableProviderFactory="true" ecorePackage="ThreeJsWrapperDescriptionLanguage.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ThreeJsWrapperDescriptionLanguage.ecore#//Datatype">
+      <genEnumLiterals ecoreEnumLiteral="ThreeJsWrapperDescriptionLanguage.ecore#//Datatype/INT"/>
+      <genEnumLiterals ecoreEnumLiteral="ThreeJsWrapperDescriptionLanguage.ecore#//Datatype/FLOAT"/>
+      <genEnumLiterals ecoreEnumLiteral="ThreeJsWrapperDescriptionLanguage.ecore#//Datatype/BOOL"/>
+      <genEnumLiterals ecoreEnumLiteral="ThreeJsWrapperDescriptionLanguage.ecore#//Datatype/STRING"/>
+    </genEnums>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Model/wrappers"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper/supertype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper/pck"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper/constructorSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper/propertySection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//ObjectWrapper/methodSection"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//ConstructorSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//ConstructorSection/builderConstructor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//ConstructorSection/defaultConstructor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//ConstructorSection/constructors"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//Constructor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//Constructor/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Constructor/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//Constructor/json"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//PropertySection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//PropertySection/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//Property/readOnly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Property/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//Property/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//MethodSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//MethodSection/methods"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//Method">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Method/returnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//Method/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Method/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//Parameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//Parameter/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//Type/datatype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Type/wrapper"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ThreeJsWrapperDescriptionLanguage.ecore#//Type/arrayType"/>
+    </genClasses>
+    <genClasses ecoreClass="ThreeJsWrapperDescriptionLanguage.ecore#//ArrayType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ThreeJsWrapperDescriptionLanguage.ecore#//ArrayType/dimensions"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

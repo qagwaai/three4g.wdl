@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: net.blimster.gwt.threejs.wdl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: net.blimster.gwt.threejs.wdl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;bundle-version="2.1.0";visibility:=reexport,
+ org.eclipse.xtext.xbase;bundle-version="2.1.0";resolution:=optional;visibility:=reexport,
+ org.apache.log4j;bundle-version="1.2.15";visibility:=reexport,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types
+Import-Package: org.apache.log4j,
+ org.apache.commons.logging,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtext.xtend2.lib,
+ org.eclipse.xtend2.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: net.blimster.gwt.threejs.wdl,
+ net.blimster.gwt.threejs.wdl.services,
+ net.blimster.gwt.threejs.wdl.threeJsWrapperDescriptionLanguage,
+ net.blimster.gwt.threejs.wdl.threeJsWrapperDescriptionLanguage.impl,
+ net.blimster.gwt.threejs.wdl.threeJsWrapperDescriptionLanguage.util,
+ net.blimster.gwt.threejs.wdl.parseTreeConstruction,
+ net.blimster.gwt.threejs.wdl.parser.antlr,
+ net.blimster.gwt.threejs.wdl.parser.antlr.internal,
+ net.blimster.gwt.threejs.wdl.validation,
+ net.blimster.gwt.threejs.wdl.scoping,
+ net.blimster.gwt.threejs.wdl.generator,
+ net.blimster.gwt.threejs.wdl.formatting
+

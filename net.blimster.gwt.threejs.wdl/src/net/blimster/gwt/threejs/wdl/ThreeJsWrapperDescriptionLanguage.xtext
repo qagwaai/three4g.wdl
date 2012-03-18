@@ -1,0 +1,54 @@
+grammar net.blimster.gwt.threejs.wdl.ThreeJsWrapperDescriptionLanguage with org.eclipse.xtext.common.Terminals
+
+generate threeJsWrapperDescriptionLanguage "http://www.blimster.net/gwt/threejs/wdl/ThreeJsWrapperDescriptionLanguage"
+
+Model:
+	(wrappers+=ObjectWrapper)*;
+	
+ObjectWrapper:
+	(abstract?='abstract')? 'class' name=ID ('extends' supertype=[ObjectWrapper])?
+	'{'
+	
+		'package' pck=QualifiedName';'
+		
+		(constructorSection=ConstructorSection)?
+		
+		(propertySection=PropertySection)?
+		
+		(methodSection=MethodSection)?
+	
+	'}';
+		
+ConstructorSection:
+	{ConstructorSection} 'constructors:' (builderConstructor='builder' '(' ')' ';')? (defaultConstructor='default' '(' ')' ';')? (constructors+=Constructor)*;	
+	
+Constructor:
+	{Constructor} (name=ID)? '(' parameters+=Parameter (',' parameters+=Parameter)* ')' (json?='json')?  ';';	
+	
+PropertySection:
+	'properties:' {PropertySection} (properties+=Property)*;
+	
+Property:
+	(readOnly?='readonly')? type=Type name=ID ';';
+
+MethodSection:
+	'methods:' {MethodSection} (methods+=Method)*;
+	
+Method:
+	(returnType=Type)? name=ID '(' (parameters+=Parameter (',' parameters+=Parameter)*)? ')' ';';	
+	
+Parameter:
+	type=Type name=ID;	
+	
+Type:
+	(datatype=Datatype | wrapper=[ObjectWrapper]) (arrayType=ArrayType)?;
+	
+ArrayType:
+	{ArrayType} '[' (dimensions=INT)? ']';	
+
+enum Datatype:
+	INT = 'int' | FLOAT = 'float' | BOOL = 'boolean' | STRING = 'string';
+	
+QualifiedName:
+  ID ('.' ID)*;
+
